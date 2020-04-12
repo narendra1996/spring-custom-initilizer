@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Import;
 
 
 @SpringBootApplication
-@EnableCaching
+//@EnableCaching
 @Import(CustomInitializrConfiguration.class)
 
 public class CustomInitilizerApplication {

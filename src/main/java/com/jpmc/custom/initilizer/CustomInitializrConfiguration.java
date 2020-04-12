@@ -23,4 +23,8 @@ public class CustomInitializrConfiguration {
 		return new DefaultInitializrMetadataProvider(metadata, initializrMetadataUpdateStrategy);
 	}
 	
+	@Bean
+	public InitializrMetadataUpdateStrategy initializrMetadataUpdateStrategy() {
+	    return (metadata) -> metadata;
+	}
 }

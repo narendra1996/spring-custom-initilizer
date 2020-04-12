@@ -19,12 +19,24 @@ initializr:
       id: java
       default: true
   bootVersions:
-    - name : Latest SNAPSHOT
-      id: 2.2.0.BUILD-SNAPSHOT
+    - name : 2.3.0 M4
+      id: 2.3.0.M4
       default: false
-    - name : 2.1.1.
-      id: 2.1.1.RELEASE
+    - name : 2.3.0.BUILD-SNAPSHOT
+      id: 2.3.0 (SNAPSHOT)
+      default: false
+    - name : 2.2.7.BUILD-SNAPSHOT
+      id: 2.2.7 (SNAPSHOT)
+      default: false
+    - name : 2.2.6.RELEASE
+      id: 2.2.6
       default: true
+    - name : 2.1.14.BUILD-SNAPSHOT
+      id: 2.1.14 (SNAPSHOT)
+      default: false
+    - name : 2.1.13.RELEASE
+      id: 2.1.13
+      default: false
   types:
     - name: Maven Project
       id: maven-project
@@ -34,6 +46,14 @@ initializr:
         format: project
       default: true
       action: /starter.zip
+    - name: Maven POM
+      id: maven-build
+      description: Generate a Maven pom.xml.
+      tags:
+        build: maven
+        format: build
+      default: false
+      action: /pom.xml
   env:
     boms:
       azure:
